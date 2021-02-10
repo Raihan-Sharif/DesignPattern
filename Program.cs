@@ -6,7 +6,9 @@ namespace FactoryMethod
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Transportation roadTransport = new RoadTransportation();
+            TransportService transportService = new TransportService(roadTransport);
+
         }
     }
 }
