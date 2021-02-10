@@ -6,9 +6,13 @@ namespace FactoryMethod
     {
         static void Main(string[] args)
         {
-            Transportation roadTransport = new RoadTransportation();
-            TransportService transportService = new TransportService(roadTransport);
+            Transportation transport = new RoadTransportation();
+            TransportService transportService = new TransportService(transport);
+            transportService.GetTransport();
 
+            transport = new SeaTransportation();
+            transportService = new TransportService(transport);
+            transportService.GetTransport();
         }
     }
 }

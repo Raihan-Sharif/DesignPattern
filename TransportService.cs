@@ -7,12 +7,12 @@ namespace FactoryMethod
     internal class TransportService
     {
         private Transportation _transportFactory;
-        public TransportService(TransportationFactory transportationFactory)
+        public TransportService(Transportation transportation)
         {
-            _transportFactory = transportationFactory.GetTransportation();
+            _transportFactory = transportation;
         }
 
-        private void GetTransport()
+        internal void GetTransport()
         {
             _transportFactory.DeliverTransport();
         }
